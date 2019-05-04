@@ -1,0 +1,563 @@
+@import "vars";
+
+@media screen and (max-width: 1024px){
+	.header{
+		.wrapper{
+			padding: 27px 80px;
+			.navigation{
+				&_links{
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+
+	.main{
+		.items{
+			.headline-box{
+				.headline{
+					top: -118px;
+				}
+			}
+			.items-box{
+				flex-wrap: wrap;
+				.item{
+					margin: 20px 0;
+				}
+			}
+		}
+
+		.news{
+			.novetly{
+				&_about{
+					padding: 30px 30px;
+				}
+			}
+		}
+
+		.blog{
+			.cards{
+				flex-wrap: wrap;
+				.card{
+					margin-top: 20px;
+				}
+			}
+		}
+
+		.icons{
+			.icons-box{
+				.icon{
+					margin: 25px 0 25px 0;
+					text-align: justify;
+					&:nth-child(even){
+						flex-direction: row-reverse;
+						.icon_picture{
+							padding: 0 0 0 30px;
+						}
+					}
+				}
+			}	
+		}
+
+		.team{
+			.cards{
+				flex-wrap: wrap;
+				.card{
+					margin-top: 20px;
+				}
+			}
+		}
+
+		.relations{
+			.wrapper-form{
+				.form{
+					&_input-box{
+						.input{
+							margin-bottom: 25px;
+						}
+					}
+					&_button{
+						margin-top: 20px;
+						width: 200px;
+						height: 30px;
+						font-size: 1.4em;
+						line-height: 10px;
+					}
+				}
+			}
+		}
+	}
+	.footer{
+		.footer-box{
+			.social-icons{
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px){
+	.container{
+		padding: 0 100px;
+	}
+	.header{
+		.wrapper{
+			padding: 25px 0 0 0;
+			.logo{
+				margin: 0 0 20px 50px;
+			}
+			.burger-menu{
+				position: relative;
+				display: block;
+				border-radius: 50%;
+				width: 50px;
+				height: 50px;
+				left: 290px;
+			}
+			.navigation{
+				margin: 0 50px 20px 0;
+				&_links{
+					display: none;
+				}
+			}
+			.social-icons{
+				display: none;
+			}
+		}
+	}
+
+	.under-nav{
+		top: 100px;
+		.headline{
+			font-family: Gotham, sans-serif;
+			font-size: 5em;
+			color: @light_text_color;
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: -1.92px;
+			margin: 0;
+		}
+		.description{
+			font-family: Gotham, sans-serif;
+			font-size: 1em;
+			line-height: 30px;
+			text-transform: uppercase;
+			letter-spacing: 10px;
+			color: @main_text_color;
+		}
+	}
+
+	.main{
+		.items{
+			.headline-box{
+			}
+			.items-box{
+				.item{
+					&_icon{
+						width: 100px;
+						height: 100px;
+						>i{
+							font-size: 30px;
+							line-height: 100px;
+						}
+
+					}
+				}
+			}
+		}
+
+		.news{
+			.novetly{
+				display: flex;
+				flex-direction: column-reverse;
+				&:nth-child(even){
+					flex-direction: column-reverse;
+				}
+				&_about{
+					width: 100%;
+					padding: 15px 15px 20px 25px;
+				}
+				&_picture{
+					width: 100%;
+				}
+			}
+		}
+
+		.blog{
+			.headline-box{
+				.headline{
+					top: -119px;
+				}
+			}
+		}
+
+		.progress{
+			.progress-box{
+				justify-content: center;
+				text-align: center;
+				.wrapper-text{
+					.progress-bar{
+						align-items: center;
+					}
+				}
+			}
+			&_picture{
+				display: none;
+			}
+		}
+
+		.team{
+			.cards{
+				flex-wrap: wrap;
+				.card{
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+
+	.footer{
+		.container{
+			padding: 0;
+		}	
+		.footer-box{
+			text-align: center;
+			justify-content: center;
+			.text{
+				width: 100%;
+			}
+			.social-icons{
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px){
+	.header{
+		.wrapper{
+			.social-icons{
+				display: none;
+			}
+			.burger-menu{
+				left: 140px;
+			}
+		}
+	}
+	.under-nav{
+		
+		.headline{
+			font-size: 3em;
+		}
+		.description{
+			font-size: 0.7em;
+		}
+	}
+
+	.main{
+		.items{
+			.container{
+				padding: 10px;
+			}
+			.headline-box{
+				.letter{
+					font-size: 7em;
+				}
+				.headline{
+					font-size: 1.1em;
+				}
+			}
+		}
+
+		.blog{
+			.container{
+				padding: 10px;
+			}
+			.headline-box{
+				.letter{
+					font-size: 7em;
+				}
+				.headline{
+					font-size: 1.1em;
+				}
+				.text{
+					font-size: 1.3em;
+					line-height: 30px;
+				}
+			}
+			.cards{
+				padding-top: 25px;
+			}
+		}
+
+		.icons{
+			.container{
+				padding: 0 30px;
+			}
+
+			.icons-box{
+				.icon{
+					&_picture{
+						font-size: 2.5em;
+					}
+					&_description{
+						font-size: 0.9em;
+					}
+				}
+			}
+		}
+
+		.progress{
+			.container{
+				padding: 10px;
+			}
+			.progress-box{
+				.wrapper-text{
+					.description{
+						font-size: 1em;
+					}
+					.progress-bar{
+						>progress{
+							width: 300px;
+							height: 30px;
+						}
+					}
+				}
+			}
+		}
+
+		.team{
+			.container{
+				padding: 10px;
+			}
+			.headline-box{
+				.letter{
+					font-size: 7em;
+				}
+				.headline{
+					font-size: 1.1em;
+				}
+				.text{
+					font-size: 1.3em;
+					line-height: 30px;
+				}
+			}
+		}
+
+		.relations{
+			.container{
+				padding: 0 25px 25px 25px;
+			}
+			.headline-box{
+				.letter{
+					font-size: 7em;
+				}
+				.headline{
+					font-size: 0.9em;
+					top: -113px;
+				}
+			}
+			.wrapper-form{
+
+				.form{
+					&_input-box{
+						.input{
+							width: 300px;
+							height: 40px;
+							margin: 10px 0;
+						}
+					}
+					&_button{
+						margin-top: 20px;
+						width: 200px;
+						height: 30px;
+						font-size: 1.4em;
+						line-height: 10px;
+					}
+				}
+			}
+		}
+	}
+	.footer{
+		.container{
+			padding: 0;
+		}	
+		.footer-box{
+			text-align: center;
+			justify-content: center;
+			.text{
+				width: 100%;
+			}
+			.social-icons{
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 375px){
+	.header{
+		.wrapper{
+			.social-icons{
+				display: none;
+			}
+			.burger-menu{
+				left: 100px;
+			}
+		}
+	}
+	.under-nav{
+		
+		.headline{
+			font-size: 3em;
+		}
+		.description{
+			font-size: 0.7em;
+		}
+	}
+
+	.main{
+		.items{
+			.container{
+				padding: 10px;
+			}
+			.headline-box{
+				.letter{
+					font-size: 7em;
+				}
+				.headline{
+					font-size: 1.1em;
+				}
+			}
+		}
+
+		.blog{
+			.container{
+				padding: 10px;
+			}
+			.headline-box{
+				.letter{
+					font-size: 7em;
+				}
+				.headline{
+					font-size: 1.1em;
+				}
+				.text{
+					font-size: 1.3em;
+					line-height: 30px;
+				}
+			}
+			.cards{
+				padding-top: 25px;
+			}
+		}
+
+		.icons{
+			.container{
+				padding: 0 30px;
+			}
+
+			.icons-box{
+				.icon{
+					&_picture{
+						font-size: 2.5em;
+					}
+					&_description{
+						font-size: 0.9em;
+					}
+				}
+			}
+		}
+
+		.progress{
+			.container{
+				padding: 10px;
+			}
+			.progress-box{
+				.wrapper-text{
+					.description{
+						font-size: 1em;
+					}
+					.progress-bar{
+						>progress{
+							width: 300px;
+							height: 30px;
+						}
+					}
+				}
+			}
+		}
+
+		.team{
+			.container{
+				padding: 10px;
+			}
+			.headline-box{
+				.letter{
+					font-size: 7em;
+				}
+				.headline{
+					font-size: 1.1em;
+				}
+				.text{
+					font-size: 1.3em;
+					line-height: 30px;
+				}
+			}
+		}
+
+		.relations{
+			.container{
+				padding: 0 25px;
+			}
+			.headline-box{
+				.letter{
+					font-size: 7em;
+				}
+				.headline{
+					font-size: 0.9em;
+					top: -113px;
+				}
+			}
+			.wrapper-form{
+				.form{
+					margin-bottom: 25px;
+					&_input-box{
+						.input{
+							width: 300px;
+							height: 40px;
+							margin: 10px 0;
+						}
+					}
+					&_button{
+						margin-top: 20px;
+						width: 200px;
+						height: 30px;
+						font-size: 1.4em;
+						line-height: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	.footer{
+		.container{
+			padding: 0;
+		}	
+		.footer-box{
+			text-align: center;
+			justify-content: center;
+			.text{
+				width: 100%;
+			}
+			.social-icons{
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,221 @@
+@import 'vars';
+
+.forLinks(){
+	position: relative;
+	font-family: 'Myriad-Pro', sans-serif;
+	font-size: 1em;
+	font-weight: 400;
+	outline: none;
+	color: @white_text_color;
+	text-decoration: none;
+	border-bottom: 4px solid transparent;
+	margin-right: 40px;
+	&:last-child{
+		margin-right: 0;
+	}
+	&:hover::after{
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -59px;
+		width: 100%;
+		height: 4px;
+		background-color: @main_background_color;
+	}
+}
+
+.headline-letter-main{
+	// With white letters
+	text-align: center;
+	padding-top: 25px;
+	margin: 0;
+	.letter{
+		font-size: 10em;
+		font-family: 'Roboto', sans-serif;
+		line-height: 210px;
+		text-transform: uppercase;
+		font-weight: 600;
+		color: rgba(@white_text_color, .18);
+	}
+	.headline{
+		position: relative;
+		height: 0;
+		font-family: 'Gotham', sans-serif;
+		color: @white_text_color;
+		font-size: 1.3em;
+		text-transform: uppercase;
+		top: -120px;
+	}
+	>h2{
+		margin: 0;
+	}
+}
+
+.headline-letter-secondary{
+	// With grey letters
+	.headline-letter-main();
+	.letter{
+		color: rgba(@grey_text, .18);
+	}
+	.headline{
+		color: @grey_text;
+	}
+	.text{
+		color: @grey_text;
+		font-family: 'Gotham', sans-serif;
+		font-size: 1.9em;
+		font-weight: 400;
+		line-height: 37px;
+	}
+}
+
+.cards{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding-top: 76px;
+	.card{
+		max-width: 270px;
+		display: flex;
+		text-align: center;
+		flex-direction: column;
+		&_image{
+			min-height: 280px;
+			object-fit: cover;
+		}
+
+		&_text{
+			&_headline{
+				color: @main_text_color;
+				font-family: 'Gotham';
+				font-size: 1em;
+				font-weight: 900;
+				line-height: 36px;
+				text-transform: uppercase;
+			}
+			&_description{
+				color: @grey_text;
+				font-family: 'Gotham - Book', sans-serif;
+				font-size: 0.8em;
+				font-weight: 500;
+				line-height: 20px;
+			}
+		}
+	}
+}
+
+
+.forBurger(){
+	.forLinks();
+	span{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -1px;
+		margin-left: -10px;
+		width: 30px;
+		height: 3px;
+		background-color: @secondary_background_color;
+		&::before, &::after{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -1.5px;
+			margin-left: -15px;
+			width: 30px;
+			height: 3px;
+			background-color: @secondary_background_color;
+			transition: .5s;
+		}
+			&::before{
+				transform: translateY(-7px);
+			}
+			&::after{
+				transform: translateY(7px);
+			}
+		}
+	&:hover::after{
+		height: 0;
+		background-color: transparent;
+	}
+}
+
+
+.scroll{
+	display: flex;
+	flex-direction: column;
+	margin-top: 120px;
+	align-items: center;
+	span{
+		font-family: 'Open-sans', sans-serif;
+		font-size: 0.9em;
+		line-height: 22px;
+		color: @white_text_color;
+	}
+
+	&_down{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		width: 40px;
+		height: 65px;
+		border: 2px solid @white_color;
+		border-radius: 35%;
+		margin-top: 22px;
+		&::before{
+			content: '';
+			position: absolute;
+			top: 10px;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: @white_background_color;
+			animation: pointDown 1.5s linear infinite reverse;
+		}
+	}
+}
+
+.forInputText{
+	color: @white_text_color;
+	font-weight: 400;
+	line-height: 36px;
+	letter-spacing: 0.3px;
+	padding: 0 0 0 20px;
+	font-family: 'Gotham - Book', sans-serif;
+	box-sizing: border-box;
+	&::placeholder{
+		color: @white_text_color;
+		text-transform: capitalize;
+	}
+}
+
+.forButtons{
+	min-width: 227px;
+	max-height: 64px;
+	background-color: @main_background_color;
+	color: #ffffff;
+	font-family: 'Gotham', sans-serif;
+	font-size: 1.5em;
+	font-weight: 500;
+	line-height: 24px;
+	text-transform: uppercase;
+	border: none;
+	padding: 19px 0 27px 0;
+	outline: none;
+	transition: all .2s;
+	&:hover{
+		background-color: @secondary_background_color;
+	}
+	&:focus{
+		background-color: darken(@main_background_color, 10%);
+	}
+}
+
+
+@keyframes pointDown {
+	0%{
+		opacity: 0;
+		top: 50px;
+	}
+}
